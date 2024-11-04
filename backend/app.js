@@ -13,9 +13,11 @@ const port = process.env.port;
 
 const userRouter = require('./routes/userRouter');
 const authRouter = require('./routes/authRotuer');
+const postRouter = require('./routes/postRouter');
 
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
+app.use('/api/posts', postRouter);
 
 // Start server
 app.listen((port), () => {
